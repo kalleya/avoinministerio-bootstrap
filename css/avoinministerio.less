@@ -1,0 +1,155 @@
+@import "../bootstrap/less/bootstrap.less";
+
+/* Scaffolfing customization */
+.container-fluid {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* Customize bootstrap-styles */
+@baseFontFamily: "Segoe WP","Lucida Grande","Lucida Sans",sans-serif;
+@baseFontSize: 16px;
+@baseLineHeight: 24px;
+@altFontFamily: "Georgia","Helvetica Neue",Arial,"Liberation Sans",FreeSans,sans-serif;
+@purple: #473161;
+@linkColor: #29ABE2;
+@grey: #b3b3b3;
+@lightGrey: #eee;
+
+/* Avoinministetio Less mixins */
+.sectionHeader {
+  color: @purple;
+  font-size: @baseFontSize + 1;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.marginBottom {
+  margin-bottom: 10px;
+}
+
+.headerLink {
+  font-family: @altFontFamily;
+  font-size: @baseFontSize + 4;
+  color: @black;
+  line-height: @baseLineHeight;
+  font-weight: normal;
+  a {
+    color: @black;
+    &:after {
+      content:" \00bb";
+    }
+  }
+}
+
+.doubleBottomBorder {
+  border-bottom: 6px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  -moz-border-image: url(../img/border-double-dotted.png) 0 0 27 0 round round;
+  -webkit-border-image: url(../img/border-double-dotted.png) 0 0 27 0 round round;
+  -o-border-image: url(../img/border-double-dotted.png) 0 0 27 0 round round;
+  -ms-border-image: url(../img/border-double-dotted.png) 0 0 27 0 round round;
+  border-image: url(../img/border-double-dotted.png) 0 0 27 0 round round;
+  .marginBottom;
+}
+
+/* Global header */
+header {
+  font-size: @baseFontSize - 4;
+  font-weight: bold;
+  padding-bottom: 20px;
+  .doubleBottomBorder;
+}
+
+footer {
+  background: @lightGrey;
+  padding: 30px 20px 10px 20px;
+  border-top: 5px solid @grey;
+}
+
+/* Frontpage banner */
+.frontpage .frontBanner {
+  background: @purple;
+  color: @white;
+  h1 {
+    margin: 0 0 20px 20px;
+  }
+  h2 {
+    margin: 20px 0 0 20px;
+  }
+  .buttons {
+    margin-top: 20px;
+    @media (max-width: 768px) {
+      margin-left: 20px;
+    }
+  }
+}
+
+/* Frontpage topDrafts */
+.frontpage .topDrafts {
+  .marginBottom;
+  padding-bottom: 10px;
+  border-bottom: 10px solid @purple;
+  h1 {
+    .sectionHeader;
+    .doubleBottomBorder;
+  }
+  .topDraftItem {
+    @media (min-width: 768px) {
+      border-left: 2px dotted @grey;
+      padding-left: 20px;
+      &.firstItem {
+        border-left: 0;
+        padding-left: 0;
+      }
+      h2 {
+        .headerLink;
+        min-height: 120px;
+      }
+    }
+  }
+}
+
+/* ideaList */
+.ideaList {
+  >h1 {
+    .sectionHeader;
+    .doubleBottomBorder;
+  }
+  article {
+    border-bottom: 1px dotted @grey;
+    .marginBottom;
+    .date {
+      color: @grey;
+    }
+    h1 {
+      .headerLink;
+      .marginBottom;
+    font-size: @baseFontSize + 2;
+    }
+    .votesFor {
+      color: @green;
+    }
+    .votesAgainst {
+      color: @red;
+    }
+  }
+}
+
+.asideElements {
+  background: @lightGrey;
+  aside {
+    margin: 5px;
+    h1 {
+      .sectionHeader;
+      border-top: 2px solid @black;
+      margin: -5px -5px;
+      padding: 0 5px;
+    }
+    ul, p {
+      font-size: @baseFontSize - 4;
+    }
+  }
+}
