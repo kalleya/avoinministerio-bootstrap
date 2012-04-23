@@ -190,3 +190,80 @@ footer {
     }
   }
 }
+
+.ideaPage {
+  .ideaDescription {
+    img {
+      .marginBottom;
+      margin-right: 10px;
+    }
+    div.summary p {
+      font-size: @baseFontSize + 2;
+    }
+    div.body p {
+      font-size: @baseFontSize - 2;
+      &:first-child:first-letter {
+        font-size: @baseFontSize + 8;
+        margin-right: 2px;
+      }
+    }
+    aside {
+      div {
+        background: @lightGrey;
+        padding: 20px;
+        text-align: center;
+        h1 {
+          .sectionHeader;
+          border-top: 2px solid @black;
+          margin: -20px -20px 0 -20px;
+          padding: 0 5px;
+        }
+      }
+    }
+  }
+  .expertOpinions {
+    &>h1 {
+      .sectionHeader;
+      .doubleBottomBorder;
+    }
+    .expert {
+      border-bottom: 1px dotted @grey;
+      .marginBottom;
+      img {
+        float: left;
+        .marginBottom;
+      }
+      p {
+        margin-left: 100px;
+        span.name {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  .comments {
+    &>h1 {
+      .sectionHeader;
+      .doubleBottomBorder;
+    }
+    textarea {
+      @media (min-width: 768px) {
+        width: 80%;
+      }
+      @media (max-width: 767px) {
+        width: 97%;
+      }
+    }
+    .comment {
+      border-bottom: 1px dotted @grey;
+      .marginBottom;
+      img {
+        float: left;
+        .marginBottom;
+      }
+      p {
+        margin-left: 100px;
+      }
+    }
+  }
+}
