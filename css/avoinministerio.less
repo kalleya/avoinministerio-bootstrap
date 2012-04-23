@@ -36,6 +36,11 @@
   font-weight: normal;
   a {
     color: @black;
+  }
+}
+
+.linkBrackets {
+  a {
     &:after {
       content:" \00bb";
     }
@@ -70,7 +75,7 @@ footer {
 }
 
 /* Frontpage banner */
-.frontpage .frontBanner {
+.frontPage .frontBanner {
   background: @purple;
   color: @white;
   h1 {
@@ -88,7 +93,7 @@ footer {
 }
 
 /* Frontpage topDrafts */
-.frontpage .topDrafts {
+.frontPage .topDrafts {
   .marginBottom;
   padding-bottom: 10px;
   border-bottom: 10px solid @purple;
@@ -106,15 +111,16 @@ footer {
       }
       h2 {
         .headerLink;
+        .linkBrackets;
         min-height: 120px;
       }
     }
   }
 }
 
-/* ideaList */
-.ideaList {
-  >h1 {
+/* frontpage ideaList */
+.frontPage .ideaList {
+  &>h1 {
     .sectionHeader;
     .doubleBottomBorder;
   }
@@ -126,8 +132,9 @@ footer {
     }
     h1 {
       .headerLink;
+      .linkBrackets;
       .marginBottom;
-    font-size: @baseFontSize + 2;
+      font-size: @baseFontSize + 2;
     }
     .votesFor {
       color: @green;
@@ -150,6 +157,36 @@ footer {
     }
     ul, p {
       font-size: @baseFontSize - 4;
+    }
+  }
+}
+
+.ideaListPage .ideaList {
+  &>div>h1 {
+    .sectionHeader;
+    .doubleBottomBorder;
+  }
+  article {
+    border-bottom: 1px dotted @grey;
+    .marginBottom;
+    .date {
+      color: @grey;
+    }
+    h1 {
+      .headerLink;
+      .marginBottom;
+      font-family: @altFontFamily;
+      font-size: @baseFontSize + 8;
+    }
+    .ideaIngress {
+      color: @black;
+      .linkBrackets;
+      @media (min-width: 768px) {
+        margin-top: 32px;
+      }
+      a {
+        color: @black;
+      }
     }
   }
 }
