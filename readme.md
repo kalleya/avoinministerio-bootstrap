@@ -12,7 +12,7 @@ Deploy to RoR
 ---------------------
 
 * Add TB 2.0 to the project
-* Use a Less Compiler
-* Convert static templates
+* Use a backend Less Compiler
+* Convert static templates to HAML
 * Enjoy
 
